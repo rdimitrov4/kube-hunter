@@ -92,8 +92,8 @@ https://avd.aquasec.com/
 | KHV050 | Local to Pod (kube-hunter-7jssg) |       Access Risk      | Read access to pod's service account token |                                                                 Accessing the pod service account token gives an attacker the option to use the server API                                                                | eyJhbGciOiJSUzI1NiIs ImtpZCI6Il9rbFhrTUNr aVdGX1BLUG96SEJtd0NU MEhJanhWVnBhcjJ0bDBF ...                      |
 
 
----
-
+6) **Clean up**
+    
     Delete the created kube-hunter pod
     
     `:~/Downloads/kube-hunter-main$ kubectl delete -f job.yaml`
@@ -103,6 +103,5 @@ https://avd.aquasec.com/
     `host@host:~/Downloads/kube-hunter-main$ kubectl get pods | grep "kube-hunter"`
     `host@host:~/Downloads/kube-hunter-main$`
     `host@host:~/Downloads/kube-hunter-main$ kubectl get pods`
------------------------------------------------------------------------------------------------------------------------------
 
 **Kube-Hunter can be deployed to other namespaces aswell for further vulnerability testing**
