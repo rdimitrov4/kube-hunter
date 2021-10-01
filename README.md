@@ -1,6 +1,7 @@
 ![kube-hunter](https://github.com/aquasecurity/kube-hunter/blob/main/kube-hunter.png)
 
 1) **Connect the local kubectl on current shell instance to the Gardner cluster with a pre-generated token.**
+
 `export KUBECONFIG=$KUBECONFIG:/path/to/file/kubeconfig--promart--q-lab.yaml`
 
 2) **Setup Istio on the cluster**
