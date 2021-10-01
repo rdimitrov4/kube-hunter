@@ -34,7 +34,7 @@
 
 - Install Istio
 
-    $ istioctl install
+    `$ istioctl install`
 
     Add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy your application later:
     `$ kubectl label namespace default istio-injection=enabled`
@@ -63,7 +63,7 @@
     
     `:~/Downloads/kube-hunter-main$ kubectl logs kube-hunter-7jssg`
 
-INFO kube_hunter.modules.report.collector Started hunting
+`INFO kube_hunter.modules.report.collector Started hunting
 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
 INFO kube_hunter.modules.report.collector Found vulnerability "Read access to pod's service account token" in Local to Pod (kube-hunter-7jssg)
 INFO kube_hunter.modules.report.collector Found vulnerability "CAP_NET_RAW Enabled" in Local to Pod (kube-hunter-7jssg)
@@ -111,7 +111,7 @@ https://avd.aquasec.com/
 |        |                      |                      |                      | attacker the option  | MEhJanhWVnBhcjJ0bDBF |
 |        |                      |                      |                      | to use the server    | cDA1cTQifQ.eyJhdWQiO |
 |        |                      |                      |                      | API                  | ...                  |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
++--------+----------------------+----------------------+----------------------+----------------------+----------------------+`
 
 ---
 
