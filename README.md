@@ -83,45 +83,14 @@ For further information about a vulnerability, search its ID in:
 
 https://avd.aquasec.com/
 
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
-| ID     | LOCATION             | CATEGORY             | VULNERABILITY        | DESCRIPTION          | EVIDENCE             |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
-| KHV053 | Local to Pod (kube-  | Information          | AWS Metadata         | Access to the AWS    | cidr: 10.250.0.0/19  |
-|        | hunter-7jssg)        | Disclosure           | Exposure             | Metadata API exposes |                      |
-|        |                      |                      |                      | information about    |                      |
-|        |                      |                      |                      | the machines         |                      |
-|        |                      |                      |                      | associated with the  |                      |
-|        |                      |                      |                      | cluster              |                      |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
-| None   | Local to Pod (kube-  | Access Risk          | CAP_NET_RAW Enabled  | CAP_NET_RAW is       |                      |
-|        | hunter-7jssg)        |                      |                      | enabled by default   |                      |
-|        |                      |                      |                      | for pods.            |                      |
-|        |                      |                      |                      |     If an attacker   |                      |
-|        |                      |                      |                      | manages to           |                      |
-|        |                      |                      |                      | compromise a pod,    |                      |
-|        |                      |                      |                      |     they could       |                      |
-|        |                      |                      |                      | potentially take     |                      |
-|        |                      |                      |                      | advantage of this    |                      |
-|        |                      |                      |                      | capability to        |                      |
-|        |                      |                      |                      | perform network      |                      |
-|        |                      |                      |                      |     attacks on other |                      |
-|        |                      |                      |                      | pods running on the  |                      |
-|        |                      |                      |                      | same node            |                      |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
-| None   | Local to Pod (kube-  | Access Risk          | Access to pod's      | Accessing the pod's  | ['/var/run/secrets/k |
-|        | hunter-7jssg)        |                      | secrets              | secrets within a     | ubernetes.io/service |
-|        |                      |                      |                      | compromised pod      | account/ca.crt', '/v |
-|        |                      |                      |                      | might disclose       | ar/run/secrets/kuber |
-|        |                      |                      |                      | valuable data to a   | netes.io/serviceacco |
-|        |                      |                      |                      | potential attacker   | ...                  |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+
-| KHV050 | Local to Pod (kube-  | Access Risk          | Read access to pod's | Accessing the pod    | eyJhbGciOiJSUzI1NiIs |
-|        | hunter-7jssg)        |                      | service account      | service account      | ImtpZCI6Il9rbFhrTUNr |
-|        |                      |                      | token                | token gives an       | aVdGX1BLUG96SEJtd0NU |
-|        |                      |                      |                      | attacker the option  | MEhJanhWVnBhcjJ0bDBF |
-|        |                      |                      |                      | to use the server    | cDA1cTQifQ.eyJhdWQiO |
-|        |                      |                      |                      | API                  | ...                  |
-+--------+----------------------+----------------------+----------------------+----------------------+----------------------+`
+
+|   ID   |             LOCATION             |        CATEGORY        |                VULNERABILITY               |                                                                                                        DESCRIPTION                                                                                                        |                                                   EVIDENCE                                                   |
+|:------:|:--------------------------------:|:----------------------:|:------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------:|
+| KHV053 | Local to Pod (kube-hunter-7jssg) | Information Disclosure |            AWS Metadata Exposure           |                                                            Access to the AWS Metadata API  exposes information about the  machine associated with the  cluster                                                            |                                              cidr: 10.250.0.0/19                                             |
+|  None  | Local to Pod (kube-hunter-7jssg) |       Access Risk      |             CAP_NET_RAW Enabled            | CAP_NET_RAW is enabled by default for pods. If an attacker manages to  compromise a pod,  they could potentially  take advantage of this  capability  to perform network attacks  on other pods running on  the same node |                                                                                                              |
+|  None  | Local to Pod (kube-hunter-7jssg) |       Access Risk      |           Access to pod's secrets          |                                                         Accessing the pod's secrets within a compromised pod might disclose valuable data to a potential attacker                                                         | ['/var/run/secrets/k ubernetes.io/service account/ca.crt', '/v ar/run/secrets/kuber netes.io/serviceacco ... |
+| KHV050 | Local to Pod (kube-hunter-7jssg) |       Access Risk      | Read access to pod's service account token |                                                                 Accessing the pod service account token gives an attacker the option to use the server API                                                                | eyJhbGciOiJSUzI1NiIs ImtpZCI6Il9rbFhrTUNr aVdGX1BLUG96SEJtd0NU MEhJanhWVnBhcjJ0bDBF ...                      |
+
 
 ---
 
