@@ -101,7 +101,9 @@ https://avd.aquasec.com/
     Make sure the pod is deleted
     
     `host@host:~/Downloads/kube-hunter-main$ kubectl get pods | grep "kube-hunter"`
+    
     `host@host:~/Downloads/kube-hunter-main$`
+    
     `host@host:~/Downloads/kube-hunter-main$ kubectl get pods`
 
 **Kube-Hunter can be deployed to other namespaces aswell for further vulnerability testing**
