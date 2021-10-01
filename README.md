@@ -8,7 +8,7 @@
 
 - Install Istio using istioctl https://istio.io/latest/docs/setup/getting-started/
 
-------- Download Istio
+- Download Istio
 
 Go to the Istio release page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
     $ curl -L https://istio.io/downloadIstio | sh -
