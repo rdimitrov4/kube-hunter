@@ -65,15 +65,24 @@
     
 ---
 INFO kube_hunter.modules.report.collector Started hunting
+
 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+
 INFO kube_hunter.modules.report.collector Found vulnerability "Read access to pod's service account token" in Local to Pod (kube-hunter-7jssg)
+
 INFO kube_hunter.modules.report.collector Found vulnerability "CAP_NET_RAW Enabled" in Local to Pod (kube-hunter-7jssg)
+
 INFO kube_hunter.modules.report.collector Found vulnerability "Access to pod's secrets" in Local to Pod (kube-hunter-7jssg)
+
 INFO kube_hunter.modules.report.collector Found vulnerability "AWS Metadata Exposure" in Local to Pod (kube-hunter-7jssg)
 
+
 Vulnerabilities
+
 For further information about a vulnerability, search its ID in: 
+
 https://avd.aquasec.com/
+
 +--------+----------------------+----------------------+----------------------+----------------------+----------------------+
 | ID     | LOCATION             | CATEGORY             | VULNERABILITY        | DESCRIPTION          | EVIDENCE             |
 +--------+----------------------+----------------------+----------------------+----------------------+----------------------+
